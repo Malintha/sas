@@ -20,7 +20,7 @@ $sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD);
 $msg = $_GET['msg'];
 $sender->sms( $msg, 94776190526);
 
-echo '$msg sent\n';
+echo $msg.' sent\n';
 
 ?>
 
