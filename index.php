@@ -16,11 +16,11 @@ define('SERVER_URL', 'http://api.dialog.lk:8080/sms/send');
 define('APP_ID', 'APP_015755');
 define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
-$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
 $msg = $_GET['msg'];
+$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
 $sender->sms( $msg, 94776190526);
 
-echo $msg.' sent\n';
+echo $msg.' sent';
 
 ?>
 
