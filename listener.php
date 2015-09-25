@@ -1,17 +1,10 @@
 <?php
-// ==========================================
-// Ideamart : Sample PHP SMS API
-// ==========================================
-// Author : Pasindu De Silva
-// Licence : MIT License
-// http://opensource.org/licenses/MIT
-// ==========================================
 
 // ini_set('error_log', 'sms-app-error.log');
-require_once 'lib/Log.php';
-require_once 'lib/SMSReceiver.php';
-require_once 'lib/SMSSender.php';
-require_once 'connectdb.php'
+// require_once 'lib/Log.php';
+// require_once 'lib/SMSReceiver.php';
+// require_once 'lib/SMSSender.php';
+// require_once 'connectdb.php'
 
 // define('SERVER_URL', 'http://api.dialog.lk:8080/sms/send');	
 // define('APP_ID', 'APP_015755');
