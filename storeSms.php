@@ -14,7 +14,7 @@ $type = $_GET['type'];
 
 echo $location;
 
-$sql = "INSERT INTO smsstore1 (name,phonenu,lon,lat) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."','".$type."')";
+$sql = "INSERT INTO smsstore1 (name,phonenu,lon,lat,type) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."','".$type."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "success";
