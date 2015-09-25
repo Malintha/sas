@@ -28,7 +28,7 @@ echo 'test1';
 	}
 
 	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
-	$sender->sms( 'This message is send to one particlar no', $address);
+	$sender->sms( 'Ramindu is being raped! Please help him!', $address);
 
 	echo 'test2';
 
