@@ -2,7 +2,27 @@
 
 require_once 'lib/SmsReceiver.php';
 require_once 'lib/SmsSender.php';
+require_once 'connectdb.php';
 
-echo 'hello';
+echo 'test1';
+
+try {
+    $receiver = new SmsReceiver(); 
+
+    $content = $receiver->getMessage(); // get the message content
+    $address = $receiver->getAddress(); // get the sender's address
+    $requestId = $receiver->getRequestID(); // get the request ID
+    $applicationId = $receiver->getApplicationId(); // get application ID
+    $encoding = $receiver->getEncoding(); // get the encoding value
+    $version = $receiver->getVersion(); // get the version
+
+}
+
+} catch (SmsException $ex) {
+    //throws when failed sending or receiving the sms
+    echo("ERROR: {$ex->getStatusCode()} | {$ex->getStatusMessage()}");
+}
+
+echo 'test2';
 
 ?>
