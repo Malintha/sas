@@ -27,10 +27,10 @@ echo 'test1';
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-	if($content=="Sn test"){
+	// if($content=="Sn test"){
 	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
 	$response=$sender->sms('This message is sent only to one user', $address);
-}
+// }
 
 	echo 'test2';
 
