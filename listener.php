@@ -6,7 +6,7 @@ require_once 'connectdb.php';
 
 echo 'test1';
 
-try {
+
     $receiver = new SmsReceiver(); 
 
     $content = $receiver->getMessage(); // get the message content
@@ -16,12 +16,7 @@ try {
     $encoding = $receiver->getEncoding(); // get the encoding value
     $version = $receiver->getVersion(); // get the version
 
-}
 
-} catch (SmsException $ex) {
-    //throws when failed sending or receiving the sms
-    echo("ERROR: {$ex->getStatusCode()} | {$ex->getStatusMessage()}");
-}
 
 echo 'test2';
 
