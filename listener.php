@@ -27,10 +27,18 @@ echo 'test1';
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-	// if($content=="Sn test"){
-	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
-	$response=$sender->sms('This message is sent only to one user', $address);
-// }
+	$responseMsg = "Ramindu is in trouble!"
+	$applicationId = "APP_000001";
+ 	$encoding = "0";
+ 	$version =  "1.0";
+    // $password = "password";
+    $sourceAddress = "77150";
+    $deliveryStatusRequest = "1";
+    $charging_amount = ":1.00";
+   // $destinationAddresses = array("tel:94771122336");
+
+    $binary_header = "";
+    $res = $sender->sms($responseMsg, $address,APP_PASSWORD, APP_ID, $sourceAddress, $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header);
 
 	echo 'test2';
 
