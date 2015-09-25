@@ -17,16 +17,16 @@
 // define('APP_ID', 'APP_015755');
 // define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
-$logger = new Logger();
+// $logger = new Logger();
 echo 'test';
 
-try{
+// try{
 
 	// Creating a receiver and intialze it with the incomming data
-	$receiver = new SMSReceiver(file_get_contents('php://input'));
+	// $receiver = new SMSReceiver(file_get_contents('php://input'));
 	
-	//Creating a sender
-	$sender = new SMSSender( SERVER_URL, APP_ID, APP_PASSWORD);
+	// //Creating a sender
+	// $sender = new SMSSender( SERVER_URL, APP_ID, APP_PASSWORD);
 	
 	echo 'test2';
 
@@ -54,8 +54,8 @@ try{
 	// 	$response=$sender->sms('This message is sent only to one user', $address);
 	// }
 
-}catch(SMSServiceException $e){
-	$logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
-}
+// }catch(SMSServiceException $e){
+// 	$logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
+// }
 
 ?>
