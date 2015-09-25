@@ -7,11 +7,13 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully\n";
 
-$location = $_GET['name'];
+$name = $_GET['name'];
+$latitude = $_GET['lat'];
+$longitude = $_GET['lon'];
 
 echo $location;
 
-$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$location."','89.3636','34.444')";
+$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$location."','".$longitude."','".$latitude."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
