@@ -19,7 +19,7 @@ define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 $logger = new Logger();
 echo 'test';
-$logger->WriteLog("Tetetesss");
+
 
 try{
 
@@ -29,29 +29,31 @@ try{
 	//Creating a sender
 	$sender = new SMSSender( SERVER_URL, APP_ID, APP_PASSWORD);
 	
-	$message = $receiver->getMessage(); // Get the message sent to the app
-	$address = $receiver->getAddress();	// Get the phone no from which the message was sent 
+	echo 'test2';
 
-	$logger->WriteLog($receiver->getAddress());
+	// $message = $receiver->getMessage(); // Get the message sent to the app
+	// $address = $receiver->getAddress();	// Get the phone no from which the message was sent 
 
-	$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$address."','89.3636','34.444')";
+	// $logger->WriteLog($receiver->getAddress());
 
-	if ($conn->query($sql) === TRUE) {
-	    echo "New record created successfully";
-	} else {
-	    echo "Error: " . $sql . "<br>" . $conn->error;
-	}
+	// $sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$address."','89.3636','34.444')";
 
-	if ($message=='broadcast') {
+	// if ($conn->query($sql) === TRUE) {
+	//     echo "New record created successfully";
+	// } else {
+	//     echo "Error: " . $sql . "<br>" . $conn->error;
+	// }
 
-		// Send a broadcast message to all the subcribed users
-		$response = $sender->broadcast("This is a broadcast message to all the subcribers of the application");
+	// if ($message=='broadcast') {
+
+	// 	// Send a broadcast message to all the subcribed users
+	// 	$response = $sender->broadcast("This is a broadcast message to all the subcribers of the application");
 	
-	}else{
+	// }else{
 
-		// Send a SMS to a particular user
-		$response=$sender->sms('This message is sent only to one user', $address);
-	}
+	// 	// Send a SMS to a particular user
+	// 	$response=$sender->sms('This message is sent only to one user', $address);
+	// }
 
 }catch(SMSServiceException $e){
 	$logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
