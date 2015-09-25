@@ -27,18 +27,8 @@ echo 'test1';
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-	$responseMsg = "Ramindu is in trouble!"
-	$applicationId = "APP_000001";
- 	$encoding = "0";
- 	$version =  "1.0";
-    // $password = "password";
-    $sourceAddress = "77150";
-    $deliveryStatusRequest = "1";
-    $charging_amount = ":1.00";
-   // $destinationAddresses = array("tel:94771122336");
-	$sender = new SmsSender("http://api.dialog.lk:8080/sms/send");
-    $binary_header = "";
-    $res = $sender->sms($responseMsg, $address,APP_PASSWORD, APP_ID, $sourceAddress, $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header);
+	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
+	$sender->sms( 'This message is send to one particlar no', $address);
 
 	echo 'test2';
 
