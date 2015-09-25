@@ -23,6 +23,10 @@ echo 'test1';
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 
-echo 'test2';
+	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
+	$sender->sms( "Ramindu is  being abused!!", $address);
+
+
+	echo 'test2';
 
 ?>
