@@ -4,24 +4,17 @@
 		
 	echo 'hello';
 	//$msg = $_GET['msg'];
-	$sql = "SELECT * FROM smsstore1 ORDER BY id DESC LIMIT 1";
-	$retval = mysql_query( $sql, $conn );
+	$sql = "SELECT * FROM smsstore1";
+	$result = $conn->query($sql);
 
-	// echo $retval;
-if(! $retval )
-{
-  die('Could not get data: ' . mysql_error());
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["phonenu"]. "<br>";
+    }
+} else {
+    echo "0 results";
 }
-while($row = mysql_fetch_assoc($retval))
-{
-    echo "Tutorial ID :{$row['id']}  <br> ".
-         "Title: {$row['name']} <br> ".
-         "Author: {$row['lon']} <br> ".
-         "Submission Date : {$row['lat']} <br> ".
-         "--------------------------------<br>";
-} 
-
-echo "Fetched data successfully\n";
 
 
 ?>
