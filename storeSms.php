@@ -10,10 +10,11 @@ require_once 'connectdb.php';
 $phone = $_GET['phone'];
 $latitude = $_GET['lat'];
 $longitude = $_GET['lon'];
+$type = $_GET['type'];
 
 echo $location;
 
-$sql = "INSERT INTO smsstore1 (name,phonenu,lon,lat) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."')";
+$sql = "INSERT INTO smsstore1 (name,phonenu,lon,lat) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."','".$type."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "success";
