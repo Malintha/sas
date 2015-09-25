@@ -13,7 +13,7 @@ $longitude = $_GET['lon'];
 
 echo $location;
 
-$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."')";
+$sql = "INSERT INTO smsstore1 (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "success";
