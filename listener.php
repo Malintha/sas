@@ -16,7 +16,7 @@ echo 'test1';
     $encoding = $receiver->getEncoding(); // get the encoding value
     $version = $receiver->getVersion(); // get the version
 
-	$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$address."','".$longitude."','".$latitude."')";
+	$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$address."','".$content."','".$content."')";
 	if ($conn->query($sql) === TRUE) {
     echo "success";
 	} else {
