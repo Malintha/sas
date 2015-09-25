@@ -8,7 +8,7 @@
 // ==========================================
 
 // ini_set('error_log', 'sms-app-error.log');
-require_once 'lib/Log.php';
+// require_once 'lib/Log.php';
 require_once 'lib/SMSReceiver.php';
 require_once 'lib/SMSSender.php';
 require_once 'connectdb.php'
