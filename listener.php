@@ -11,15 +11,13 @@ ini_set('error_log', 'sms-app-error.log');
 require_once 'lib/Log.php';
 require_once 'lib/SMSReceiver.php';
 require_once 'lib/SMSSender.php';
+require_once 'connectdb.php'
 
 define('SERVER_URL', 'http://api.dialog.lk:8080/sms/send');	
 define('APP_ID', 'APP_015755');
 define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 $logger = new Logger();
-
-
-
 
 try{
 
@@ -34,6 +32,13 @@ try{
 
 	$logger->WriteLog($receiver->getAddress());
 
+	$sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$address."','89.3636','34.444')";
+
+	if ($conn->query($sql) === TRUE) {
+	    echo "New record created successfully";
+	} else {
+	    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 
 	if ($message=='broadcast') {
 
