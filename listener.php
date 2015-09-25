@@ -1,7 +1,7 @@
 <?php
 
 require_once 'lib/SmsReceiver.php';
-require_once 'lib/SmsSender.php';
+require_once 'lib/SMSSender.php';
 require_once 'connectdb.php';
 
 define('SERVER_URL', 'http://api.dialog.lk:8080/sms/send');	
@@ -36,7 +36,7 @@ echo 'test1';
     $deliveryStatusRequest = "1";
     $charging_amount = ":1.00";
    // $destinationAddresses = array("tel:94771122336");
-
+	$sender = new SmsSender("http://api.dialog.lk:8080/sms/send");
     $binary_header = "";
     $res = $sender->sms($responseMsg, $address,APP_PASSWORD, APP_ID, $sourceAddress, $deliveryStatusRequest, $charging_amount, $encoding, $version, $binary_header);
 
