@@ -18,6 +18,7 @@ define('APP_ID', 'APP_015755');
 define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 $logger = new Logger();
+echo 'test';
 $logger->WriteLog("Tetetesss");
 
 try{
