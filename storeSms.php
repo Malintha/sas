@@ -11,7 +11,7 @@ $location = $_GET['name'];
 
 echo $location;
 
-$sql = "INSERT INTO getSms (timest,content) VALUES ('232323','".$location."')";
+$sql = "INSERT INTO smsstore (timest,content) VALUES ('232323','".$location."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
