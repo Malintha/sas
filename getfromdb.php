@@ -7,9 +7,7 @@
 	$sql = "SELECT * FROM smsstore1 ORDER BY id DESC LIMIT 1";
 	$retval = mysql_query( $sql, $conn );
 
-	echo $retval;
-
-
+	// echo $retval;
 
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 {
@@ -17,7 +15,7 @@
     echo $row['name']; 
 } 
 
-echo "Fetched data successfully\n";
+// echo "Fetched data successfully\n";
 
 
 ?>
