@@ -13,7 +13,7 @@ require_once 'lib/SMSReceiver.php';
 require_once 'lib/SMSSender.php';
 
 define('SERVER_URL', 'http://api.dialog.lk:8080/sms/send');	
-define('APP_ID', 'APPID');
+define('APP_ID', 'APP_015755');
 define('APP_PASSWORD', 'password');
 
 $logger = new Logger();
