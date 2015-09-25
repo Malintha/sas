@@ -10,7 +10,6 @@ define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 echo 'test1';
 
-
     $receiver = new SmsReceiver(); 
 
     $content = $receiver->getMessage(); // get the message content
@@ -28,7 +27,7 @@ echo 'test1';
 	}
 
 	$sender = new SMSSender( SERVER_URL, APP_ID,  APP_PASSWORD); 
-	$sender->sms( 'Ramindu is being raped! Please help him!', $address);
+	$sender->sms( $address, $address);
 
 	echo 'test2';
 
