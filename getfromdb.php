@@ -4,13 +4,13 @@
 		
 	echo 'hello';
 	//$msg = $_GET['msg'];
-	$sql = "SELECT * FROM smsstore1";
+	$sql = "SELECT * FROM smsstore1 ORDER BY id DESC LIMIT 1";
 	$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["phonenu"]. "<br>";
+        echo $row["id"]."#".$row["name"]."#".$row["phonenu"]."#".$row["lon"]."#".$row["lat"]."#".$row["type"];
     }
 } else {
     echo "0 results";
