@@ -2,10 +2,10 @@
 
 require_once 'connectdb.php';
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully\n";
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
+// echo "Connected successfully\n";
 
 $phone = $_GET['phone'];
 $latitude = $_GET['lat'];
@@ -16,7 +16,7 @@ echo $location;
 $sql = "INSERT INTO smsstore (name,phonenu,longitude,latitude) VALUES ('Ramindu','".$phone."','".$longitude."','".$latitude."')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "success";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
