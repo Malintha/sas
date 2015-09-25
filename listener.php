@@ -18,6 +18,9 @@ define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 $logger = new Logger();
 
+
+
+
 try{
 
 	// Creating a receiver and intialze it with the incomming data

@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
+$servername = "127.10.2.130";
+$username = "adminaUhCbR5";
+$password = "QNY_rBRexWvR";
 $dbname = "sas";
 
 // Create connection
