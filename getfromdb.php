@@ -9,13 +9,12 @@
 
 	echo $retval;
 
+
+
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 {
-    echo "Tutorial ID :{$row['id']}  <br> ".
-         "Title: {$row['name']} <br> ".
-         "Author: {$row['phonenu']} <br> ".
-         "Submission Date : {$row['lon']} <br> ".
-         "--------------------------------<br>";
+
+    echo $row['name']; 
 } 
 
 echo "Fetched data successfully\n";
