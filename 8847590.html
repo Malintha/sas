@@ -35,10 +35,10 @@
 		$(document).ready(function(){
 
 			$.ajax({
-		    type: 'GET',  
-		    url: 'getfromdb.php',
+		    type: 'GET',
+		    data:'',
+		    url: 'http://52.11.251.138/getfromdb.php',
 		    success: function(output1) {
-		         			$.mobile.loading("hide");
 							alert(output1);
 		         		  	// jsonarray_de = jQuery.parseJSON(output1);
 							//alert(jsonarray_de[0].startingpoint+" **** "+jsonarray_de[0].via+" **** "+jsonarray_de[0].destination);
@@ -49,7 +49,7 @@
 							
 		});
 
-			
+
 		});
 
 	</script>
