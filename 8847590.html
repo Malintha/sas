@@ -34,10 +34,12 @@
 
 		$(document).ready(function(){
 			alert("heheh");
+			for(int i=0;i<50;i++){
+				doSetTimeout();
+			}
 
-			while(1)
+		function doSetTimeout(){
 		setTimeout(function(){ 
-
 		$.ajax({
 		    type: 'GET',  
 		    data: {msg: 'p'},
@@ -50,10 +52,8 @@
 				// }
 				}
 		 });
-
-
 }, 3000);
-
+	}
 		});
 
 	</script>
