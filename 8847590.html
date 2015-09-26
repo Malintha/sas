@@ -23,10 +23,17 @@
 function initialize() {
   var mapProp = {
     center:new google.maps.LatLng(6.8701309,79.9144508),
-    zoom:8,
+    zoom:10,
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var myLatLng = {lat: 6.8701309, lng: 79.9144508};
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map
+  });
+
 }
 	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
