@@ -17,7 +17,7 @@ require_once 'connectdb.php';
 
 define('SERVER_URL', 'https://api.dialog.lk/sms/send');	
 define('APP_ID', 'APP_015755');
-define('APP_PASSWORD', '###############');
+define('APP_PASSWORD', '8aa7ec636c0e6e8acdb91d05da00a747');
 
 $msg = $_GET['msg'];
 $add = 'tel:B%3C4nlVyF/kOJu8JNY5ozodtRQFTLfqBGDq27KyYcxaxOUK8sc8n+ee+z4Pt0ol/MMys';
