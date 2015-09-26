@@ -34,22 +34,18 @@
 
 		$(document).ready(function(){
 
-			$.ajax({
-		    type: 'GET',
-		    data:'',
-		    url: 'http://52.11.251.138/getfromdb.php',
-		    success: function(output1) {
-							alert(output1);
-		         		  	// jsonarray_de = jQuery.parseJSON(output1);
-							//alert(jsonarray_de[0].startingpoint+" **** "+jsonarray_de[0].via+" **** "+jsonarray_de[0].destination);
-							//alert(jsonarray_de.length);
-							
-							// loop(jsonarray_de);
-							}
-							
-		});
-
-
+		$.ajax({
+		    type: 'GET',  
+		    data: {msg: 'p'},
+		    url: 'getfromdb.php',
+		    success: function(count_noti) {
+		    	//$.mobile.loading("hide");
+		    	alert(count_noti);
+				// if(count_noti){
+				// $("#noti").html("<font style='color:red;'>"+$.cookie('noti_count')+"</font>");
+				// }
+				}
+		 });
 		});
 
 	</script>
