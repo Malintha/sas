@@ -21,7 +21,7 @@
 	<script>
 	function initialize() {
 	  var mapProp = {
-	    center:new google.maps.LatLng(81.5,7.120850),
+	    enter:new google.maps.LatLng(7.12,81.5),
 	    zoom:5,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP
 	  };
@@ -39,8 +39,8 @@
 		    data: {msg: 'p'},
 		    url: 'getfromdb.php',
 		    success: function(count_noti) {
-		    	//$.mobile.loading("hide");
 		    	alert(count_noti);
+		    	$("#list").append("<a href='#'' class='alert-link'>Got another one</a>");
 				// if(count_noti){
 				// $("#noti").html("<font style='color:red;'>"+$.cookie('noti_count')+"</font>");
 				// }
